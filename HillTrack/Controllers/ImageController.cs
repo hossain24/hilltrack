@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using HillTrack.Data;
-using HillTrack.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -24,11 +20,12 @@ namespace HillTrack.Controllers
             AzureConnectionString = _config["AzureStorageConnectionString"];
         }
 
-        public IActionResult Upload()
+     /**   public IActionResult Upload()
         {
             var model = new UploadImageModel();
             return View(model);
         }
+     **/
 
         [HttpPost]
         public async Task<IActionResult> UploadNewImage(IFormFile file, string title, string tags)
