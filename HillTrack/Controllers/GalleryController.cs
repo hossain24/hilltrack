@@ -27,6 +27,12 @@ namespace HillTrack.Controllers
             return View(model);
         }
 
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
         public IActionResult Detail(int id)
         {
             var image = _imageService.GetById(id);
